@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/thumbnail_type"
+        android:title="@string/thumbnail_type">
+        <menu>
+            <item
+                android:id="@+id/thumbnail_type_default"
+                android:title="@string/default_word"/>
+            <item
+                android:id="@+id/thumbnail_type_mask"
+                android:title="@string/mask"/>
+<!--             <item -->
+<!--                 android:id="@+id/thumbnail_type_collage" -->
+<!--                 android:title="@string/collage"/> -->
+        </menu>
+    </item>
+    <item
+        android:id="@+id/open_in_web"
+        android:title="@string/open_in_web">
+    </item>
+    <item
+        android:id="@+id/options"
+        android:title="@string/options">
+    </item>
+    <item
+        android:id="@+id/clear"
+        android:title="@string/clear">
+    </item>
+    <item
+        android:id="@+id/remove"
+        android:title="@string/remove">
+    </item>
+
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="library_options"
+        android:title="@string/general" >
+        <EditTextPreference
+            android:dialogTitle="@string/set_the_title_of_library"
+            android:key="title"
+            android:title="@string/title" />
+
+        <Preference
+            android:key="description"
+            android:summary="@android:string/untitled"
+            android:title="@string/description" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preferences" >
+        <ListPreference
+            android:dialogTitle="@string/select_option"
+            android:key="thumbnail_type"
+            android:title="@string/thumbnail_type" />
+
+        <!-- CheckBoxPreference
+            android:key="auto_dismiss"
+            android:title="@string/auto_remove_failed_pictures" /-->
+        <PreferenceScreen
+            android:key="galleries"
+            android:title="@string/galleries_options" >
+            <PreferenceCategory android:title="@string/apply_to_all">
+                <CheckBoxPreference android:title="@string/visible" android:key="visible"/>
+                <CheckBoxPreference android:title="@string/updatable" android:key="updatable"/>
+            </PreferenceCategory>
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/summary" >
+        <Preference
+            android:key="author"
+            android:summary="@android:string/untitled"
+            android:title="@string/author" />
+        <Preference
+            android:key="version"
+            android:summary="@android:string/untitled"
+            android:title="@string/version" />
+
+        <PreferenceScreen
+            android:key="link_to"
+            android:title="@string/webpage" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

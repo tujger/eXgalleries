@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.wtg.exgalleries"
+    android:revisionCode="1"
+    android:versionCode="8"
+    android:versionName="0.71" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".Main"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:vmSafeMode="true"       
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".AddLibraryActivity"
+            android:label="@string/title_activity_add_library" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="android.support.v7.app.ActionBarActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.support.v7.app.ActionBarActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".ExGalleriesService"
+            android:enabled="true"
+            android:label="@string/title_activity_ex_galleries_service"
+            android:process=":eXgalleriesService" >
+        </service>
+
+        <activity
+            android:name=".PictureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_picture"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+    </application>
+
+</manifest>

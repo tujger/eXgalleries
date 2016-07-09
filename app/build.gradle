@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "ru.wtg.exgalleries"
+        minSdkVersion 16
+        targetSdkVersion 24
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:support-v4:24.0.0'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'in.srain.cube:grid-view-with-header-footer:1.0.12'
+}

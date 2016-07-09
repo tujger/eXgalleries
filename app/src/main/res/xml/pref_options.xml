@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Network" >
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/select_option"
+            android:entries="@array/network_types"
+            android:entryValues="@array/entries_3"
+            android:key="use_network"
+            android:summary="%s"
+            android:title="@string/use_network" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/about" >
+        <PreferenceScreen
+            android:key="app"
+            android:summary="@string/version_number"
+            android:title="@string/app_name" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/link_app" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="copyright"
+            android:summary="@string/link_wtg"
+            android:title="@string/copyright" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/link_wtg" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="get_from_repository"
+            android:summary="@string/get_plugin_instruction"
+            android:title="@string/get_new_plugins" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/link_repository" />
+        </PreferenceScreen>
+
+        <Preference
+            android:key="using"
+            android:summary="@android:string/untitled"
+            android:title="@string/using_colon" />
+
+        <PreferenceScreen android:title="@string/statistics" >
+            <PreferenceCategory android:title="@string/statistics" >
+                <Preference
+                    android:key="counter_albums_total"
+                    android:title="@string/albums_total" />
+                <Preference
+                    android:key="counter_pictures_total"
+                    android:title="@string/pictures_total" />
+                <Preference
+                    android:key="counter_pictures_new"
+                    android:title="@string/pictures_new" />
+                <Preference
+                    android:key="counter_pictures_favorite"
+                    android:title="@string/pictures_favorite" />
+                <Preference
+                    android:key="counter_pictures_fault"
+                    android:title="@string/pictures_fault" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

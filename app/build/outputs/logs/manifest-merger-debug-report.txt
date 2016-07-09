@@ -1,0 +1,127 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:2:1-59:12
+	package
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:6:5-31
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+	android:revisionCode
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:4:5-29
+	android:versionCode
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:5:5-28
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:10:9-38
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:9:9-35
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:13:5-67
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:13:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:14:22-76
+application
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:16:5-57:19
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:20:9-41
+	android:hardwareAccelerated
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:22:9-43
+	android:vmSafeMode
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:21:9-34
+	android:allowBackup
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:18:9-35
+	android:icon
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:19:9-45
+	android:largeHeap
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:23:9-33
+	android:theme
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:24:9-40
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:17:9-29
+activity#ru.wtg.exgalleries.AddLibraryActivity
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:25:9-28:20
+	android:label
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:27:13-63
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:26:13-47
+activity#ru.wtg.exgalleries.MainActivity
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:29:9-42:20
+	android:label
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:31:13-45
+	android:parentActivityName
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:32:13-82
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:30:13-41
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:33:13-35:76
+	android:value
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:35:17-73
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:34:17-63
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:37:13-41:29
+action#android.intent.action.MAIN
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:38:17-69
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:38:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:40:17-77
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:40:27-74
+service#ru.wtg.exgalleries.ExGalleriesService
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:44:9-49:19
+	android:enabled
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:46:13-35
+	android:process
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:48:13-50
+	android:label
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:47:13-72
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:45:13-47
+activity#ru.wtg.exgalleries.PictureActivity
+ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:51:9-56:20
+	android:label
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:54:13-59
+	android:configChanges
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:53:13-74
+	android:theme
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:55:13-51
+	android:name
+		ADDED from /Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/AndroidManifest.xml:52:13-44

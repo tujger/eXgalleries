@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false" >
+
+<!--     <ProgressBar -->
+<!--         android:id="@+id/pbThumb" -->
+<!--         style="?android:attr/progressBarStyleLarge" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_centerInParent="true" /> -->
+
+    <ru.wtg.exgalleries.helpers.TouchImageView
+        android:id="@+id/ivPicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@android:string/untitled"
+        android:src="@drawable/icon_empty"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rlError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_warning_white_48dp"
+            android:gravity="center"
+            android:text="@android:string/untitled"
+            android:textColor="@android:color/primary_text_dark" />
+    </RelativeLayout>
+
+</RelativeLayout>

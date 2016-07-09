@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.wtg.exgalleries.HomePageFragment" >
+
+    <GridView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/black"
+        android:dividerHeight="2dp"
+        android:focusableInTouchMode="true"
+        android:horizontalSpacing="1dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="1dp" />
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" />
+
+</FrameLayout>

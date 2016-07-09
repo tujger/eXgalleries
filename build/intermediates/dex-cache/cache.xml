@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="50d4e9cb657dff1923e282767f7a732df0ef2550">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_83911c449c62fecce93af38fc086cf8989ab3ce9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="3164a58c71fce5a9a4ac45fc825845627ffe48b0">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_09722f55c420c171643cf8d3ec070f48c3c0a0b6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/.gradle/caches/modules-2/files-2.1/in.srain.cube/grid-view-with-header-footer/1.0.12/6b45a6bca9304d0ae6d26d01a2ea2f62bfe46a27/grid-view-with-header-footer-1.0.12.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="6b45a6bca9304d0ae6d26d01a2ea2f62bfe46a27">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/grid-view-with-header-footer-1.0.12_5ebc7c94a9dce1e90207be54ba0a82358f474b63/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.0.0_1e592b11ce57a13e7170890eae4bd619973f9e24/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.0.0_2cf41bdfd749732722a7218cfc1387badf4282cf/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_7ffbfcf0e4fa8d6850f23860c41f8aa36a17379b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.0.0_82e8aefa763fc3d114e926e3b42935ce96651ddd/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_d72ef9585f8ec0a4ed3522a8684339c3ba855f6f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.0.0_cd9021d16d07b27c234c90a5721c63f7abc4bc28/classes.dex" />
+    </item>
+    <item
+        jar="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.0.0_83858a135fd17976a451b1ef4a2b745263b71b7e/classes.dex" />
+    </item>
+
+</items>

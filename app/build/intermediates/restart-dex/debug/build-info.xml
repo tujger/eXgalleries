@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="22"
+    density="xhdpi"
+    format="7"
+    timestamp="8391081246333"
+    token="8222548411257567951" >
+
+    <task
+        name="javac"
+        duration="1815" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="496" />
+    <task
+        name="verifier"
+        duration="57" />
+
+    <artifact
+        location="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="8391081246333" >
+        <artifact
+            location="/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

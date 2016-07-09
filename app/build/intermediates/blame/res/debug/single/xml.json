@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/xml/pref_library.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/xml/pref_library.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/xml/pref_options.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/xml/pref_options.xml"
+    }
+]

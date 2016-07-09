@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="navigation_drawer_height">180dp</dimen>
+    <dimen name="gallery_header_height">130dp</dimen>
+    <dimen name="gallery_header_thumb_size">128dp</dimen>
+    <dimen name="picture_thumb_size">200dp</dimen>
+    <dimen name="library_header_thumb_width">128dp</dimen>
+    <dimen name="library_header_thumb_height">128dp</dimen>
+    <dimen name="library_header_height">130dp</dimen>
+
+</resources>

@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.wtg.exgalleries.MainActivity" >
+
+    <item
+        android:id="@+id/action_update"
+        android:icon="@drawable/ic_refresh_white_48dp"
+        android:showAsAction="ifRoom"
+        android:title="@string/update" android:orderInCategory="10"/>
+    <item
+        android:id="@+id/action_add_library"
+        android:showAsAction="never"
+        android:title="@string/menu_add_library">
+    </item>
+
+</menu>

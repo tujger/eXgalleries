@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/update"
+        android:title="@string/update">
+    </item>
+    <item
+        android:id="@+id/all_shows"
+        android:title="@string/all_shows">
+    </item>
+    <item
+        android:id="@+id/open_in_web"
+        android:title="@string/open_in_web">
+    </item>
+    <item
+        android:id="@+id/remove_faulty"
+        android:title="@string/remove_faulty">
+    </item>
+    <item
+        android:id="@+id/hide"
+        android:title="@string/hide">
+    </item>
+    <item
+        android:id="@+id/remove"
+        android:title="@string/remove">
+    </item>
+    <item
+        android:id="@+id/clear"
+        android:title="@string/clear">
+    </item>
+
+</menu>

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/options.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/options.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/library_options.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/library_options.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/item_library_popup.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/item_library_popup.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/gallery_main.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/gallery_main.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/item_picture_popup.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/item_picture_popup.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/picture.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/picture.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/global.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/global.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/add_library.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/add_library.xml"
+    },
+    {
+        "merged": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/build/intermediates/res/merged/debug/menu/item_gallery_popup.xml",
+        "source": "/Users/tujger/Documents/Devel/Android/eXgalleries/app/src/main/res/menu/item_gallery_popup.xml"
+    }
+]

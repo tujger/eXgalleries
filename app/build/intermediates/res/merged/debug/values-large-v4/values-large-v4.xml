@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_config_prefDialogWidth">440dp</dimen>
+    <item name="abc_dialog_fixed_height_major" type="dimen">60%</item>
+    <item name="abc_dialog_fixed_height_minor" type="dimen">90%</item>
+    <item name="abc_dialog_fixed_width_major" type="dimen">60%</item>
+    <item name="abc_dialog_fixed_width_minor" type="dimen">90%</item>
+    <item name="abc_dialog_min_width_major" type="dimen">55%</item>
+    <item name="abc_dialog_min_width_minor" type="dimen">80%</item>
+    <dimen name="gallery_header_height">202dp</dimen>
+    <dimen name="gallery_header_thumb_size">200dp</dimen>
+    <dimen name="library_header_height">302dp</dimen>
+    <dimen name="library_header_thumb_height">300dp</dimen>
+    <dimen name="library_header_thumb_width">0dp</dimen>
+    <dimen name="navigation_drawer_height">220dp</dimen>
+    <dimen name="navigation_drawer_width">300dp</dimen>
+    <dimen name="picture_thumb_size">400dp</dimen>
+    <item name="fragment_homepage" type="layout">@layout/fragment_homepage_grid</item>
+    <item name="item_gallery" type="layout">@layout/item_gallery_grid</item>
+    <item name="item_library" type="layout">@layout/item_library_grid</item>
+    <item name="item_picture" type="layout">@layout/item_picture_grid</item>
+    <item name="pager_gallery" type="layout">@layout/pager_gallery_grid</item>
+    <style name="Base.Theme.AppCompat.DialogWhenLarge" parent="Base.Theme.AppCompat.Dialog.FixedSize"/>
+    <style name="Base.Theme.AppCompat.Light.DialogWhenLarge" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize"/>
+</resources>

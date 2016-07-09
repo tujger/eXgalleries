@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.wtg.exgalleries"
+    android:revisionCode="1"
+    android:versionCode="8"
+    android:versionName="0.71" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        name="ru.wtg.exgalleries.Main"
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        android:vmSafeMode="true" >
+        <activity
+            android:name="ru.wtg.exgalleries.AddLibraryActivity"
+            android:label="@string/title_activity_add_library" >
+        </activity>
+        <activity
+            android:name="ru.wtg.exgalleries.MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="android.support.v7.app.ActionBarActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.support.v7.app.ActionBarActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="ru.wtg.exgalleries.ExGalleriesService"
+            android:enabled="true"
+            android:label="@string/title_activity_ex_galleries_service"
+            android:process=":eXgalleriesService" >
+        </service>
+
+        <activity
+            android:name="ru.wtg.exgalleries.PictureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_picture"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+    </application>
+
+</manifest>
