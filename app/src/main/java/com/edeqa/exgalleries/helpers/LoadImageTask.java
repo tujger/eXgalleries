@@ -15,7 +15,7 @@ import android.util.Log;
 import android.widget.ImageView;
 
 public class LoadImageTask extends AsyncTask<String, Void, Bitmap> {
-	private ImageView bmImage;
+	private final ImageView bmImage;
 	private int dWidth, dHeight, dMode;
 	private boolean dCache = false;
 	private File mFile;

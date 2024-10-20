@@ -72,7 +72,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 
 	@Override
 	public Entity<?> getItem(Entity<?> item, Cursor cursor) {
-		return (Item) getItem(item, cursor, true);
+		return getItem(item, cursor, true);
 		// return ((Item) getItem(item, cursor,
 		// true)).setFailed(cursor.getInt(COL_FAILED) > 0 ? true : false)
 		// .setAlbum(cursor.getInt(COL_ALBUM) > 0 ? true :
@@ -116,7 +116,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 			view = convertView;
 		}
 
-		item = (Item) getItem(position);
+		item = getItem(position);
 
 		if (isHeader())
 			view.setMinimumHeight((int) context.getResources().getDimension(R.dimen.gallery_header_height));
@@ -137,7 +137,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 
 		int height = getThumbOptimalSize() / 3+2;
 		float textSize = height / 3;
-		Button b = (Button) view.findViewById(R.id.bReload);
+		Button b = view.findViewById(R.id.bReload);
 		if (b != null) {
 			b.setHeight(height);
 			if (b.getTextSize() > textSize)
@@ -152,7 +152,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 			});
 		}
 
-		b = (Button) view.findViewById(R.id.bRemove);
+		b = view.findViewById(R.id.bRemove);
 		if (b != null) {
 			b.setHeight(height);
 			if (b.getTextSize() > textSize)
@@ -169,7 +169,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 			});
 		}
 
-		b = (Button) view.findViewById(R.id.bSkip);
+		b = view.findViewById(R.id.bSkip);
 		if (b != null) {
 			b.setHeight(height);
 			if (b.getTextSize() > textSize)
@@ -186,7 +186,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 			height = ((int) context.getResources().getDimension(R.dimen.gallery_header_height) - 3) / 3;
 			textSize = height / 3;
 
-			b = (Button) view.findViewById(R.id.bAllShows);
+			b = view.findViewById(R.id.bAllShows);
 			if (b != null) {
 				b.setHeight(height);
 				b.setOnClickListener(new OnClickListener() {
@@ -214,7 +214,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 				});
 			}
 
-			b = (Button) view.findViewById(R.id.bRemoveFaulty);
+			b = view.findViewById(R.id.bRemoveFaulty);
 			if (b != null) {
 				b.setHeight(height);
 				if (b.getTextSize() > textSize)
@@ -228,7 +228,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 				});
 			}
 
-			b = (Button) view.findViewById(R.id.bClear);
+			b = view.findViewById(R.id.bClear);
 			if (b != null) {
 				b.setHeight(height);
 				if (b.getTextSize() > textSize)
@@ -249,7 +249,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 				});
 			}
 		}
-		RatingBar rb = (RatingBar) view.findViewById(R.id.rbRating);
+		RatingBar rb = view.findViewById(R.id.rbRating);
 		if (rb != null) {
 			if (isHeader() && !isFirstLevelItem(item)) {
 				rb.setNumStars(5);
@@ -276,7 +276,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 			}
 		}
 
-		ImageButton ib = (ImageButton) view.findViewById(R.id.ibMenu);
+		ImageButton ib = view.findViewById(R.id.ibMenu);
 		if (ib != null) {
 			ib.setTag(position);
 
@@ -288,30 +288,30 @@ public class ItemAdapter extends EntityAdapter<Item> {
 		 * != null) { cb.setChecked(item.isUpdatable());
 		 * cb.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener()
 		 * {
-		 * 
+		 *
 		 * @Override public void onCheckedChanged(CompoundButton buttonView,
 		 * boolean isChecked) { updateItem(item.setUpdatable(isChecked));
-		 * 
+		 *
 		 * } }); }
 		 */
-		ImageView iv = (ImageView) view.findViewById(R.id.ivAlbum);
+		ImageView iv = view.findViewById(R.id.ivAlbum);
 		if (iv != null)
 			if (item.isAlbum())
 				iv.setVisibility(View.VISIBLE);
 			else
 				iv.setVisibility(View.INVISIBLE);
 
-		TextView tv = (TextView) view.findViewById(R.id.tvTitle);
+		TextView tv = view.findViewById(R.id.tvTitle);
 		if (tv != null) {
 			tv.setText(item.getTitle());
 		}
 
-		tv = (TextView) view.findViewById(R.id.tvTitleAlt);
+		tv = view.findViewById(R.id.tvTitleAlt);
 		if (tv != null) {
 			tv.setText(item.getTitle());
 		}
 
-		tv = (TextView) view.findViewById(R.id.tvAlbumTitle);
+		tv = view.findViewById(R.id.tvAlbumTitle);
 		if (tv != null) {
 			if (item.isAlbum()) {
 				tv.setText(item.getTitle());
@@ -320,28 +320,28 @@ public class ItemAdapter extends EntityAdapter<Item> {
 				tv.setVisibility(View.INVISIBLE);
 		}
 
-		tv = (TextView) view.findViewById(R.id.tvUpdated);
+		tv = view.findViewById(R.id.tvUpdated);
 		if (tv != null) {
 			tv.setText(context.getString(R.string.updated_value,
 					item.getFormattedUpdateDate(Library.DATEFORMAT_ADAPTIVE)));
 		}
 
-		tv = (TextView) view.findViewById(R.id.tvCreated);
+		tv = view.findViewById(R.id.tvCreated);
 		if (tv != null) {
 			tv.setText(context.getString(R.string.created_value,
 					item.getFormattedCreateDate(Library.DATEFORMAT_ADAPTIVE)));
 		}
 
-		tv = (TextView) view.findViewById(R.id.tvDescription);
+		tv = view.findViewById(R.id.tvDescription);
 		if (tv != null) {
 			tv.setText(item.getDescription());
 		}
 
-		tv = (TextView) view.findViewById(R.id.tvLink);
+		tv = view.findViewById(R.id.tvLink);
 		if (tv != null)
 			tv.setText(item.getLink());
 
-		tv = (TextView) view.findViewById(R.id.tvTotalCounter);
+		tv = view.findViewById(R.id.tvTotalCounter);
 		if (tv != null) {
 			if (item.isAlbum() && (i = getEntries(new SelectionAlbum(item.getId())).getCount()) > 0) {
 				// int i = getEntries(new
@@ -354,7 +354,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 			}
 		}
 
-		tv = (TextView) view.findViewById(R.id.tvNewCounter);
+		tv = view.findViewById(R.id.tvNewCounter);
 		if (tv != null) {
 			if ((i = getEntries(new SelectionNew(item.getId())).getCount()) > 0) {
 				tv.setText(Html.fromHtml(context.getString(R.string.counter_new, i)));
@@ -364,7 +364,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 			}
 		}
 
-		tv = (TextView) view.findViewById(R.id.tvFailedCounter);
+		tv = view.findViewById(R.id.tvFailedCounter);
 		if (tv != null) {
 			if ((i = getEntries(new SelectionFault(item.getId())).getCount()) > 0) {
 				tv.setText(Html.fromHtml(context.getString(R.string.counter_fails, i)));
@@ -377,11 +377,11 @@ public class ItemAdapter extends EntityAdapter<Item> {
 		return view;
 	}
 
-	
+
 	private void callPicasso(final Entity<?> item, final View view) {
-		final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.pbThumb);
-		final ImageView iv = (ImageView) view.findViewById(R.id.ivThumb);
-		final ImageView ivNew = (ImageView) view.findViewById(R.id.ivNew);
+		final ProgressBar progressBar = view.findViewById(R.id.pbThumb);
+		final ImageView iv = view.findViewById(R.id.ivThumb);
+		final ImageView ivNew = view.findViewById(R.id.ivNew);
 		if (ivNew != null)
 			ivNew.setVisibility(View.INVISIBLE);
 
@@ -394,10 +394,10 @@ public class ItemAdapter extends EntityAdapter<Item> {
 
 		/*
 		 * Target target = new Target() {
-		 * 
+		 *
 		 * @Override public void onBitmapLoaded(final Bitmap bitmap,
 		 * Picasso.LoadedFrom from) { new Thread(new Runnable() {
-		 * 
+		 *
 		 * @Override public void run() { File file = item.getImageCachePath();
 		 * new File(file.getAbsolutePath()).getParentFile().mkdirs();
 		 * System.out.println("SAVETO=" + item.getImageCachePath().toString());
@@ -405,11 +405,11 @@ public class ItemAdapter extends EntityAdapter<Item> {
 		 * FileOutputStream(file); bitmap.compress(CompressFormat.JPEG, 75,
 		 * ostream); ostream.close(); } catch (Exception e) {
 		 * e.printStackTrace(); }
-		 * 
+		 *
 		 * } }).start(); }
-		 * 
+		 *
 		 * @Override public void onBitmapFailed(Drawable errorDrawable) { }
-		 * 
+		 *
 		 * @Override public void onPrepareLoad(Drawable placeHolderDrawable) {
 		 * if (placeHolderDrawable != null) { } } };
 		 */
@@ -472,7 +472,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 								public void onClick(View v) {
 									if (item.isAlbum()) {
 										setSelectionTerms(new SelectionAlbum(item.getParentId()));
-										
+
 										Main.getMainActivity().onNavigationDrawerItemSelected(item.getParentId(),
 												item.getId(), 0);
 										// Fragment fragment = new
@@ -513,7 +513,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 							System.err.println(e);
 
 							view.findViewById(R.id.rlError).setVisibility(View.VISIBLE);
-							TextView tv = (TextView) view.findViewById(R.id.tvError);
+							TextView tv = view.findViewById(R.id.tvError);
 							if (tv != null) {
 								if (NetworkState.getInstance().isAvailable()) {
 									tv.setText(context.getString(R.string.error));
@@ -541,7 +541,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 
 							progressBar.setVisibility(View.INVISIBLE);
 
-							ImageView ivNew = (ImageView) view.findViewById(R.id.ivNew);
+							ImageView ivNew = view.findViewById(R.id.ivNew);
 							if (ivNew != null)
 								ivNew.setVisibility(View.INVISIBLE);
 
@@ -611,7 +611,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 			PopupMenu popup = new PopupMenu(context, v);
 			if (isHeader()) {
 				popup.getMenuInflater().inflate(R.menu.item_gallery_popup, popup.getMenu());
-				if (!isFirstLevelItem((Item) getItem(Integer.valueOf(v.getTag().toString())))) {
+				if (!isFirstLevelItem(getItem(Integer.valueOf(v.getTag().toString())))) {
 					popup.getMenu().findItem(R.id.clear).setVisible(false);
 					popup.getMenu().findItem(R.id.hide).setVisible(false);
 				}
@@ -621,7 +621,7 @@ public class ItemAdapter extends EntityAdapter<Item> {
 				popup.getMenuInflater().inflate(R.menu.item_library_popup, popup.getMenu());
 			}
 
-			if (isFirstLevelItem((Item) getItem(Integer.valueOf(v.getTag().toString())))) {
+			if (isFirstLevelItem(getItem(Integer.valueOf(v.getTag().toString())))) {
 				popup.getMenu().findItem(R.id.remove).setVisible(false);
 			}
 

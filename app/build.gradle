@@ -6,12 +6,12 @@ android {
             storeFile file('/Users/tujger/IdeaProjects/debug.keystore')
         }
     }
-    compileSdkVersion 28
+    compileSdkVersion 35
 
     defaultConfig {
         applicationId 'com.edeqa.exgalleries'
         minSdkVersion 22
-        targetSdk 28
+        targetSdk 35
     }
 
     buildTypes {
@@ -23,8 +23,8 @@ android {
     }
     namespace 'com.edeqa.exgalleries'
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     buildToolsVersion '35.0.0'
 }

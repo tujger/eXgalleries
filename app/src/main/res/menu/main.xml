@@ -1,16 +1,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.edeqa.exgalleries.MainActivity" >
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.edeqa.exgalleries.MainActivity">
 
     <item
-        android:id="@+id/action_update"
-        android:icon="@drawable/ic_refresh_white_48dp"
-        android:showAsAction="ifRoom"
-        android:title="@string/update" android:orderInCategory="10"/>
+            android:id="@+id/action_update"
+            android:icon="@drawable/ic_refresh_white_48dp"
+            android:title="@string/update"
+            android:orderInCategory="10"
+            app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_add_library"
-        android:showAsAction="never"
-        android:title="@string/menu_add_library">
-    </item>
+            android:id="@+id/action_add_library"
+            android:title="@string/menu_add_library"
+            app:showAsAction="never"/>
 
 </menu>

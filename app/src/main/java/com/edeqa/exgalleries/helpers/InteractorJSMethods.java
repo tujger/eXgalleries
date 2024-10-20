@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 import android.content.Context;
@@ -18,13 +19,13 @@ public class InteractorJSMethods {
 
 	public String m_error_message;
 
-	private ItemAdapter ia;
+	private final ItemAdapter ia;
 	private TaskCompletedInterface callback;
 	// private Context context;
 	private boolean ready = false;
 	// private boolean cancelled=false;
 	@SuppressWarnings("unused")
-	private Context context;
+	private final Context context;
 	private static int counter;
 
 	public InteractorJSMethods(Context context) {
@@ -39,7 +40,7 @@ public class InteractorJSMethods {
 
 	// API FUNCTIONS
 	public String Print(String text) {
-		Log.v("Interactor", text.toString());
+		Log.v("Interactor", text);
 		return "true";
 	}
 
@@ -75,7 +76,7 @@ public class InteractorJSMethods {
 			BufferedReader reader;
 			reader = new BufferedReader(new InputStreamReader(in, urlCharset));
 			while ((line = reader.readLine()) != null) {
-				sb.append(new String(line.getBytes("UTF-8")) + "\n");
+				sb.append(new String(line.getBytes(StandardCharsets.UTF_8)) + "\n");
 			}
 			in.close();
 		} catch (MalformedURLException e) {
@@ -117,7 +118,7 @@ public class InteractorJSMethods {
 	public void FinishItem(long id) {
 		ia.updateItemValueNoRefresh(id, ItemAdapter.KEY_UPDATABLE, false);
 	}
-	
+
 	public boolean SaveItem(long id, long parentId, String imageLink, String title, String author, String description,
 			long createDate) {
 		boolean res = false;
@@ -126,7 +127,7 @@ public class InteractorJSMethods {
 			ia.removeItem(id);
 		} else {
 
-			Item item = (Item) ia.getItem((long) id);
+			Item item = (Item) ia.getItem(id);
 
 			if(imageLink.length()>0){
 				item.setImageLink(imageLink);
@@ -144,7 +145,7 @@ public class InteractorJSMethods {
 				item.setUpdateDate(new Date());
 //				ia.updateItemValueNoRefresh(item.getId(), ItemAdapter.KEY_UPDATE_DATE, new Date());
 
-				
+
 				if(!ia.isFirstLevelItem(item))
 					item.setUpdatable(false);
 

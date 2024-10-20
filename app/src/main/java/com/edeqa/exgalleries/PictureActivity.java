@@ -48,7 +48,7 @@ public class PictureActivity extends Activity implements com.edeqa.exgalleries.i
 		getActionBar().setHomeButtonEnabled(true);
 
 		controlsView = findViewById(R.id.rlInfo);
-		contentView = (ViewPager) findViewById(R.id.vpPicture);
+		contentView = findViewById(R.id.vpPicture);
 
 		ssAdapter = new PicturePagerAdapter(this, getIntent());
 		ssAdapter.setCallback(this);
@@ -96,7 +96,7 @@ public class PictureActivity extends Activity implements com.edeqa.exgalleries.i
 			}
 		});
 
-		Button b = (Button) controlsView.findViewById(R.id.bLeft);
+		Button b = controlsView.findViewById(R.id.bLeft);
 		b.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -108,7 +108,7 @@ public class PictureActivity extends Activity implements com.edeqa.exgalleries.i
 			}
 		});
 
-		b = (Button) controlsView.findViewById(R.id.bRight);
+		b = controlsView.findViewById(R.id.bRight);
 		b.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -148,7 +148,7 @@ public class PictureActivity extends Activity implements com.edeqa.exgalleries.i
 							.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 			break;
 		case R.id.remove:
-			ia.dismissItem((Item) ia.getItem(ia.getItemId(prevPosition)));
+			ia.dismissItem(ia.getItem(ia.getItemId(prevPosition)));
 			ssAdapter.notifyDataSetChanged();
 			recreate();
 			Toast.makeText(this, R.string.picture_removed, Toast.LENGTH_SHORT).show();
@@ -197,30 +197,30 @@ public class PictureActivity extends Activity implements com.edeqa.exgalleries.i
 
 		if (pic.getDescription().length() > 0) {
 			((TextView) controlsView.findViewById(R.id.tvDescription)).setText(Html.fromHtml(pic.getDescription()));
-			((TextView) controlsView.findViewById(R.id.tvDescription)).setVisibility(View.VISIBLE);
+			controlsView.findViewById(R.id.tvDescription).setVisibility(View.VISIBLE);
 		} else {
-			((TextView) controlsView.findViewById(R.id.tvDescription)).setVisibility(View.GONE);
+			controlsView.findViewById(R.id.tvDescription).setVisibility(View.GONE);
 		}
 
 		if (pic.getAuthor().length() > 0) {
 			((TextView) controlsView.findViewById(R.id.tvAuthor)).setText(pic.getAuthor());
-			((TextView) controlsView.findViewById(R.id.tvAuthor)).setVisibility(View.VISIBLE);
+			controlsView.findViewById(R.id.tvAuthor).setVisibility(View.VISIBLE);
 		} else {
-			((TextView) controlsView.findViewById(R.id.tvAuthor)).setVisibility(View.GONE);
+			controlsView.findViewById(R.id.tvAuthor).setVisibility(View.GONE);
 		}
 
 		if (pic.getImageCachePath() != null) {
 			((TextView) controlsView.findViewById(R.id.tvSize))
 					.setText((pic.getImageCachePath().length() / 1024) + " Kb");
-			((TextView) controlsView.findViewById(R.id.tvSize)).setVisibility(View.VISIBLE);
+			controlsView.findViewById(R.id.tvSize).setVisibility(View.VISIBLE);
 		} else {
-			((TextView) controlsView.findViewById(R.id.tvSize)).setVisibility(View.GONE);
+			controlsView.findViewById(R.id.tvSize).setVisibility(View.GONE);
 		}
 
 		((TextView) controlsView.findViewById(R.id.tvCreateDate))
 				.setText(pic.getFormattedCreateDate(Item.DATEFORMAT_ADAPTIVE));
 
-		RatingBar rb = (RatingBar) controlsView.findViewById(R.id.rbRating);
+		RatingBar rb = controlsView.findViewById(R.id.rbRating);
 		rb.setRating(pic.getRating());
 
 		rb.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {

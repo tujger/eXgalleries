@@ -132,7 +132,7 @@ public class NavigationDrawerFragment extends Fragment {
 					selectItem(-1);
 			}
 		});
-		
+
 		mDrawerHeader = (RelativeLayout) inflater.inflate(R.layout.fragment_navigation_drawer_header, container, false);
 		mDrawerListView.addHeaderView(mDrawerHeader);
 
@@ -141,9 +141,9 @@ public class NavigationDrawerFragment extends Fragment {
 
 		RelativeLayout drawerFooter = (RelativeLayout) inflater.inflate(R.layout.fragment_navigation_drawer_footer,
 				container, false);
-		((Button) drawerFooter.findViewById(R.id.bExit)).setOnClickListener(buttonClickListener);
-		((Button) drawerFooter.findViewById(R.id.bAbout)).setOnClickListener(buttonClickListener);
-		((Button) drawerFooter.findViewById(R.id.bSettings)).setOnClickListener(buttonClickListener);
+		drawerFooter.findViewById(R.id.bExit).setOnClickListener(buttonClickListener);
+		drawerFooter.findViewById(R.id.bAbout).setOnClickListener(buttonClickListener);
+		drawerFooter.findViewById(R.id.bSettings).setOnClickListener(buttonClickListener);
 		mDrawerListView.addFooterView(drawerFooter);
 
 		// la.setView(R.layout.drawer_list_item);
@@ -228,7 +228,7 @@ public class NavigationDrawerFragment extends Fragment {
 					sp.edit().putBoolean(PREF_USER_LEARNED_DRAWER, true).apply();
 				}
 
-				ImageView iv = (ImageView) mDrawerHeader.findViewById(R.id.ivThumb);
+				ImageView iv = mDrawerHeader.findViewById(R.id.ivThumb);
 				// iv.setImageBitmap(bm);
 				// mDrawerHeader.setLayoutParams(new
 				// LayoutParams(LayoutParams.MATCH_PARENT, 150));
@@ -244,7 +244,7 @@ public class NavigationDrawerFragment extends Fragment {
 
 					switch (Library.getThumbType(lib)) {
 					case 0:
-						final ProgressBar progressBar = (ProgressBar) mDrawerHeader.findViewById(R.id.pbThumb);
+						final ProgressBar progressBar = mDrawerHeader.findViewById(R.id.pbThumb);
 						progressBar.setVisibility(View.VISIBLE);
 
 						Picasso.get().load(lib.getImageLink()).resize(width, height)
@@ -276,7 +276,7 @@ public class NavigationDrawerFragment extends Fragment {
 
 					((TextView) mDrawerHeader.findViewById(R.id.tvTitle)).setText(lib.getTitle());
 					((TextView) mDrawerHeader.findViewById(R.id.tvLink)).setText(lib.getLink());
-					((TextView) mDrawerHeader.findViewById(R.id.tvLink)).setVisibility(View.VISIBLE);
+					mDrawerHeader.findViewById(R.id.tvLink).setVisibility(View.VISIBLE);
 //					int cnt;
 //					if ((cnt = la.getAllIds(lib.getId()).length) > 0) {
 //						((TextView) mDrawerHeader.findViewById(R.id.tvCount)).setText(cnt+"");
@@ -295,7 +295,7 @@ public class NavigationDrawerFragment extends Fragment {
 					int width = (int) getActivity().getResources().getDimension(R.dimen.navigation_drawer_width);
 					int height = (int) getActivity().getResources().getDimension(R.dimen.navigation_drawer_height);
 
-					final ProgressBar progressBar = (ProgressBar) mDrawerHeader.findViewById(R.id.pbThumb);
+					final ProgressBar progressBar = mDrawerHeader.findViewById(R.id.pbThumb);
 					progressBar.setVisibility(View.VISIBLE);
 
 					Picasso.get().load(R.drawable.drawer_header).resize(width, height)
@@ -315,8 +315,8 @@ public class NavigationDrawerFragment extends Fragment {
 					});
 
 					((TextView) mDrawerHeader.findViewById(R.id.tvTitle)).setText(getString(R.string.app_name));
-					((RelativeLayout) mDrawerHeader.findViewById(R.id.rlBottom)).setVisibility(View.INVISIBLE);
-					((TextView) mDrawerHeader.findViewById(R.id.tvLink)).setVisibility(View.GONE);
+					mDrawerHeader.findViewById(R.id.rlBottom).setVisibility(View.INVISIBLE);
+					mDrawerHeader.findViewById(R.id.tvLink).setVisibility(View.GONE);
 				}
 
 				getActivity().invalidateOptionsMenu(); // calls
@@ -433,7 +433,7 @@ public class NavigationDrawerFragment extends Fragment {
 	 * Callbacks interface that all activities using this fragment must
 	 * implement.
 	 */
-	public static interface NavigationDrawerCallbacks {
+	public interface NavigationDrawerCallbacks {
 		/**
 		 * Called when an item in the navigation drawer is selected.
 		 */

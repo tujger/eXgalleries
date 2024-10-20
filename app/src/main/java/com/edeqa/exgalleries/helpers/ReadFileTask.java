@@ -12,12 +12,12 @@ public class ReadFileTask extends AsyncTask<Void, Void, TextFileFromUri> {
 	public static final int DIALOG_INDETERMINATE = 0;
 	public static final int DIALOG_PROGRESS = 1;
 
-	private Context context;
-	private Uri uri;
+	private final Context context;
+	private final Uri uri;
 	private TextFileFromUri fileFromUri;
 	private int iDialogMode = 0;
 	private ProgressDialog dialog = null;
-	private TaskCompletedInterface listener;
+	private final TaskCompletedInterface listener;
 
 	public ReadFileTask(Context context, Uri uri, TextFileFromUri fileFromUri) {
 		this.context = context;

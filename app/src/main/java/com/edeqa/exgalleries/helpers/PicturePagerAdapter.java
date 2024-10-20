@@ -16,8 +16,8 @@ import com.edeqa.exgalleries.R;
 
 public class PicturePagerAdapter extends PagerAdapter {
 
-	private Context ssContext;
-	private ItemAdapter ia;
+	private final Context ssContext;
+	private final ItemAdapter ia;
 	private PictureActivity callback;
 
 	// private int[] ssImages = new int[] {
@@ -53,7 +53,7 @@ public class PicturePagerAdapter extends PagerAdapter {
 		final View view = ((LayoutInflater) ssContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
 				.inflate(R.layout.picture_show, container, false);
 
-		final TouchImageView iv = (TouchImageView) view.findViewById(R.id.ivPicture);
+		final TouchImageView iv = view.findViewById(R.id.ivPicture);
 		iv.setMaxZoom(5.f);
 		iv.setMinZoom(1.f);
 		iv.setZoom(1.f);
@@ -75,7 +75,7 @@ public class PicturePagerAdapter extends PagerAdapter {
 						System.err.println(e);
 						// view.findViewById(R.id.pbThumb).setVisibility(View.INVISIBLE);
 						view.findViewById(R.id.rlError).setVisibility(View.VISIBLE);
-						TextView tv = (TextView) view.findViewById(R.id.tvError);
+						TextView tv = view.findViewById(R.id.tvError);
 						if (tv != null) {
 							if (NetworkState.getInstance().isAvailable()) {
 								tv.setText(ssContext.getString(R.string.error));

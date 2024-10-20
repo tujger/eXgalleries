@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 public class PictureLoader {
 
 	private static ExecutorService es = null;
-	private static Object sync = new Object();
+	private static final Object sync = new Object();
 
 	private static ExecutorService getExecutor() {
 		if (es == null) {
@@ -29,7 +29,7 @@ public class PictureLoader {
 		Thread saveThread=new Thread(new Runnable() {
 
 			@Override
-			public void run() 
+			public void run()
 			{
 				try {
 					new File(destinationFile).getParentFile().mkdirs();

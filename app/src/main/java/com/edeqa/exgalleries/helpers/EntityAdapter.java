@@ -162,10 +162,10 @@ abstract public class EntityAdapter<T> extends BaseAdapter {
 					.setAuthor(cursor.getString(COL_AUTHOR)).setDescription(cursor.getString(COL_DESCRIPTION))
 					.setCreateDate(cursor.getLong(COL_CREATE_DATE)).setUpdateDate(cursor.getLong(COL_UPDATE_DATE))
 					.setAccessDate(cursor.getLong(COL_ACCESS_DATE))
-					.setVisible(cursor.getInt(COL_VISIBLE) == 1 ? true : false)
-					.setUpdatable(cursor.getInt(COL_UPDATABLE) == 1 ? true : false)
-					.setAlbum(cursor.getInt(COL_ALBUM) == 1 ? true : false)
-					.setFailed(cursor.getInt(COL_FAILED) == 1 ? true : false).setRating(cursor.getInt(COL_RATING));
+					.setVisible(cursor.getInt(COL_VISIBLE) == 1)
+					.setUpdatable(cursor.getInt(COL_UPDATABLE) == 1)
+					.setAlbum(cursor.getInt(COL_ALBUM) == 1)
+					.setFailed(cursor.getInt(COL_FAILED) == 1).setRating(cursor.getInt(COL_RATING));
 			return (T) item;
 		} else {
 			throw new CursorIndexOutOfBoundsException("Cant move cursor to postion");
@@ -194,7 +194,7 @@ abstract public class EntityAdapter<T> extends BaseAdapter {
 		}
 		return id;
 	}
-	
+
 	public long getPreviousItemId(int position) {
 		long id=0;
 		if (cursor.moveToPosition(position-1)) {
@@ -203,7 +203,7 @@ abstract public class EntityAdapter<T> extends BaseAdapter {
 		}
 		return id;
 	}
-	
+
 	public long findIdByLink(String link) {
 		return findIdByString(KEY_LINK, link);
 	}
@@ -295,9 +295,10 @@ abstract public class EntityAdapter<T> extends BaseAdapter {
 		// KEY_PARENT_ID };
 
 		// запрос к базе
-		String selection = null, selectionArgs[] = null;
+		String selection = null;
+      String[] selectionArgs = null;
 
-		if (parentId > 0) {
+      if (parentId > 0) {
 			selection = KEY_PARENT_ID + " = ?";
 			selectionArgs = new String[] { parentId + "" };
 		}
@@ -586,7 +587,7 @@ abstract public class EntityAdapter<T> extends BaseAdapter {
 		}
 		return 0;
 	}
-	
+
 	public long getIdOfCurrentPosition() {
 		long id = 0;
 		if (cursor != null && cursor.moveToPosition(position)) {

@@ -73,11 +73,11 @@ public class AddLibraryActivity extends Activity {
 		((TextView) findViewById(R.id.tvDescription)).setText(Html.fromHtml(lp.getProperty(LibraryParser.DESCRIPTION)));
 
 		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		TableLayout tl = (TableLayout) findViewById(R.id.galleries);
+		TableLayout tl = findViewById(R.id.galleries);
 
 		for (Item lg : lp.getGalleries()) {
 			RelativeLayout tr = (RelativeLayout) inflater.inflate(R.layout.activity_add_library_item, null);
-			TextView tv = (TextView) tr.findViewById(R.id.tvLibraryTitle);
+			TextView tv = tr.findViewById(R.id.tvLibraryTitle);
 			tv.setText(lg.getTitle());
 			tl.addView(tr);
 		}
@@ -102,7 +102,7 @@ public class AddLibraryActivity extends Activity {
 			ia.updateItem(lib);
 			Toast.makeText(this, getString(R.string.library_exists_updated), Toast.LENGTH_SHORT).show();
 		} else {
-			libId = ia.addItem((Entity<?>) lib);
+			libId = ia.addItem(lib);
 		}
 
 		// ItemAdapter ia = ItemAdapter.getInstance(Main.getContext(),libId);

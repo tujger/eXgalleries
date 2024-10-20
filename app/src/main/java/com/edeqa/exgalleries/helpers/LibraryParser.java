@@ -17,7 +17,7 @@ import android.text.TextUtils;
 public class LibraryParser implements Serializable{
 
 	private static final long serialVersionUID = -2096257442937879400L;
-	
+
 	public final static String NAME = "name";
 	public final static String TITLE = "title";
 	public final static String LINK = "link";
@@ -30,9 +30,9 @@ public class LibraryParser implements Serializable{
 	public final static String JSMAIN = "jsmain";
 	public final static String SOURCE = "source";
 
-	private StringBuffer sb;
-	private Map<String, ArrayList<String>> properties;
-	private LinkedList<Item> galleries;
+	private final StringBuffer sb;
+	private final Map<String, ArrayList<String>> properties;
+	private final LinkedList<Item> galleries;
 	private boolean bSuccess;
 
 	public LibraryParser(StringBuffer sb) {

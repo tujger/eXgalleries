@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Toast;
+
 import com.edeqa.exgalleries.HomePageFragment.OnFragmentInteractionListener;
 import com.edeqa.exgalleries.helpers.ItemAdapter;
 import com.edeqa.exgalleries.helpers.LibraryParser;
@@ -101,7 +102,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
 		IntentFilter filter = new IntentFilter(BROADCAST_RECEIVER);
 		registerReceiver(receiver, filter);
 
-		mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
+		mNavigationDrawerFragment.setUp(R.id.navigation_drawer, findViewById(R.id.drawer_layout));
 
 		if (getFragmentManager().getBackStackEntryCount() == 0) {
 			onNavigationDrawerItemSelected(0, 0, 0);
@@ -256,9 +257,8 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
 		/*
 		 * Showing Library properties dialog
 		 */
-		if (object instanceof TextFileFromUri) {
-			TextFileFromUri fileFromUri = (TextFileFromUri) object;
-			if (!fileFromUri.isSuccess()) {
+		if (object instanceof TextFileFromUri fileFromUri) {
+          if (!fileFromUri.isSuccess()) {
 				Toast.makeText(this, fileFromUri.getErrorMessage(), Toast.LENGTH_SHORT).show();
 				return;
 			}
@@ -270,7 +270,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
 			dialog.setCanceledOnTouchOutside(false);
 			dialog.show();
 
-			LibraryParser lp = new LibraryParser(((TextFileFromUri) fileFromUri).getStringBuffer());
+			LibraryParser lp = new LibraryParser(fileFromUri.getStringBuffer());
 
 			if (dialog.isShowing())
 				dialog.dismiss();
@@ -304,7 +304,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
 			String name;
 
 			if (value > 0) {
-				fragment = new LibraryOptionsFragment((long) value);
+				fragment = new LibraryOptionsFragment(value);
 				name = "library_options";
 			} else {
 				fragment = new OptionsFragment();
@@ -327,8 +327,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
 		if (mNavigationDrawerFragment.isDrawerOpen()) {
 
 			mNavigationDrawerFragment.closeDrawer();
-			return;
-		} else {
+        } else {
 			if (getFragmentManager().getBackStackEntryCount() > 1) {
 
 				BackStackEntry entry = getFragmentManager()
@@ -341,10 +340,9 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
 
 				entry = getFragmentManager().getBackStackEntryAt(getFragmentManager().getBackStackEntryCount() - 1);
 
-				if (getFragmentManager().findFragmentByTag(entry.getName()) instanceof GalleryListFragment) {
-					GalleryListFragment glf = (GalleryListFragment) getFragmentManager()
-							.findFragmentByTag(entry.getName());
-					long id = glf.getActiveId();
+				if (getFragmentManager().findFragmentByTag(
+                    entry.getName()) instanceof GalleryListFragment glf) {
+                  long id = glf.getActiveId();
 					if (id > 0) {
 						mTitle = la.getItem(id).getTitle();
 					}
@@ -360,8 +358,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
 			}
 
 			onResume();
-			return;
-		}
+        }
 		// super.onBackPressed();
 	}
 
@@ -372,10 +369,10 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
 		BackStackEntry entry = getFragmentManager()
 				.getBackStackEntryAt(getFragmentManager().getBackStackEntryCount() - 1);
 
-		if (getFragmentManager().findFragmentByTag(entry.getName()) instanceof GalleryListFragment) {
-			GalleryListFragment glf = (GalleryListFragment) getFragmentManager().findFragmentByTag(entry.getName());
+		if (getFragmentManager().findFragmentByTag(
+            entry.getName()) instanceof GalleryListFragment glf) {
 
-			outState.putLong(STATE_ACTIVE_ID, glf.getActiveId());
+          outState.putLong(STATE_ACTIVE_ID, glf.getActiveId());
 			outState.putLong(STATE_POSITION, glf.getPositionId());
 			outState.putLong(STATE_SCROLL_TO, glf.getScrollToId());
 		}

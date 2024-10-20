@@ -16,8 +16,9 @@ public class GalleryPagerAdapter extends PagerAdapter {
 
 	private GridViewWithHeaderAndFooter mGridView;
 
-	private Context context;
-	private ItemAdapter ga, ia;
+	private final Context context;
+	private final ItemAdapter ga;
+  private ItemAdapter ia;
 
 	public GalleryPagerAdapter(Context context, long parentId) {
 		this.context = context;
@@ -73,9 +74,8 @@ public class GalleryPagerAdapter extends PagerAdapter {
 				.inflate(R.layout.pager_gallery, container, false);
 
 		ga.setHeader(true);
-		ViewSwitcher header = (ViewSwitcher) ga.getView(position,
-				(ViewSwitcher) ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
-						.inflate(R.layout.item_gallery, container, false),
+		ViewSwitcher header = (ViewSwitcher) ga.getView(position, ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
+                .inflate(R.layout.item_gallery, container, false),
 				null);
 
 		// ViewSwitcher header = (ViewSwitcher) ((LayoutInflater) context
@@ -91,7 +91,7 @@ public class GalleryPagerAdapter extends PagerAdapter {
 		// ia.setSelection(new SelectionGalleries(mLibraryId));
 		ia.setView(R.layout.item_picture);
 
-		mGridView = (GridViewWithHeaderAndFooter) view.findViewById(android.R.id.list);
+		mGridView = view.findViewById(android.R.id.list);
 		mGridView.addHeaderView(header);
 		mGridView.setColumnWidth(EntityAdapter.getThumbOptimalSize());
 		// if(ia.getPosition()>0){

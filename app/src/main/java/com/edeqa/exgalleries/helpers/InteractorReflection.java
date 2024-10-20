@@ -9,14 +9,14 @@ import java.util.Set;
 
 public class InteractorReflection {
 
-	private static Map<String, Set<Method>> METHOD_CACHE = new HashMap<String, Set<Method>>();
+	private static final Map<String, Set<Method>> METHOD_CACHE = new HashMap<String, Set<Method>>();
 
 	private InteractorReflection() {
 	}
 
 	/**
 	 * Finds methods with the given name on the given class.
-	 * 
+	 *
 	 * @param clazz
 	 *            the class
 	 * @param name
@@ -41,7 +41,7 @@ public class InteractorReflection {
 
 	/**
 	 * Finds methods with the given name on the given class.
-	 * 
+	 *
 	 * @param clazz
 	 *            the class
 	 * @param name

@@ -105,7 +105,7 @@ public class ExGalleriesService extends Service {
 
 		Intent notificationIntent = new Intent(getApplicationContext(), MainActivity.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent,
-				PendingIntent.FLAG_CANCEL_CURRENT);
+				PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 		Resources res = getApplication().getResources();
 
@@ -342,8 +342,7 @@ public class ExGalleriesService extends Service {
 			} else {
 				Toast.makeText(getApplicationContext(), getString(R.string.javascript_initialization_timeout),
 						Toast.LENGTH_SHORT).show();
-				;
-			}
+            }
 
 			// while(!browser.API_DONE && i++<WebViewJS.WAIT_FOR_DONE){
 			// try {
