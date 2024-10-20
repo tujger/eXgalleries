@@ -15,7 +15,7 @@
 <!--         android:layout_height="wrap_content" -->
 <!--         android:layout_centerInParent="true" /> -->
 
-    <ru.wtg.exgalleries.helpers.TouchImageView
+    <com.edeqa.exgalleries.helpers.TouchImageView
         android:id="@+id/ivPicture"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

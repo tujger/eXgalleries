@@ -1,27 +1,44 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    signingConfigs {
+        debug {
+            storeFile file('/Users/tujger/IdeaProjects/debug.keystore')
+        }
+    }
+    compileSdkVersion 28
 
     defaultConfig {
-        applicationId "ru.wtg.exgalleries"
-        minSdkVersion 16
-        targetSdkVersion 24
+        applicationId 'com.edeqa.exgalleries'
+        minSdkVersion 22
+        targetSdk 28
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.edeqa.exgalleries'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '35.0.0'
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.android.support:support-v4:24.0.0'
 
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'in.srain.cube:grid-view-with-header-footer:1.0.12'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'in.srain.cube:grid-view-with-header-footer:1.0.12'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }

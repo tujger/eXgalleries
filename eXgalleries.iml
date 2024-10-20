@@ -1,19 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="eXgalleries" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="java-gradle" name="Java-Gradle">
-      <configuration>
-        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/build" />
-        <option name="BUILDABLE" value="false" />
-      </configuration>
-    </facet>
-  </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/.gradle" />
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$" dumb="true">
+      <excludeFolder url="file://$MODULE_DIR$/app/build/generated/ap_generated_sources" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/generated/res" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/aar_metadata_check" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/annotation_processor_list" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/apk" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/apk_ide_redirect_file" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/app_metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/assets/debug/mergeDebugAssets" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/assets/debugAndroidTest" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/compatible_screen_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/compile_app_classes_jar" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/compressed_assets" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/data_binding_layout_info_type_merge" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/desugar_graph" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/dex" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/dex_archive_input_jar_hashes" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/dex_number_of_buckets_file" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/duplicate_classes_check" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/external_file_lib_dex_archives" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/external_libs_dex_archive" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/external_libs_dex_archive_with_artifact_transforms" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/incremental/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/incremental/debugAndroidTest" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestJniLibFolders" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/incremental/packageDebug" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/javac" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/linked_resources_binary_format" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/manifest_merge_blame_file" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/merged_java_res" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/merged_jni_libs" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/merged_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/merged_manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/merged_res" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/merged_res_blame_folder" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/merged_shaders" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/mixed_scope_dex_archive" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/navigation_json" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/nested_resources_validation_report" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/packaged_manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/project_dex_archive" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/runtime_symbol_list" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/signing_config_versions" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/source_set_path_map" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/stable_resource_ids_file" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/sub_project_dex_archive" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/symbol_list_with_package_name" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/intermediates/validate_signing_config" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/outputs/apk/androidTest" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/outputs/apk/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/app/build/tmp/compileDebugJavaWithJavac" />
+      <excludeFolder url="file://$MODULE_DIR$/projectFilesBackup" />
     </content>
-    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
-    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

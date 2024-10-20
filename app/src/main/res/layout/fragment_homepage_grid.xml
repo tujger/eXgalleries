@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.wtg.exgalleries.HomePageFragment" >
+    tools:context="com.edeqa.exgalleries.HomePageFragment" >
 
     <GridView
         android:id="@android:id/list"
