@@ -105,7 +105,7 @@ public class ExGalleriesService extends Service {
 
 		Intent notificationIntent = new Intent(getApplicationContext(), MainActivity.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent,
-				PendingIntent.FLAG_CANCEL_CURRENT);
+				PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 		Resources res = getApplication().getResources();
 

@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Toast;
+
 import com.edeqa.exgalleries.HomePageFragment.OnFragmentInteractionListener;
 import com.edeqa.exgalleries.helpers.ItemAdapter;
 import com.edeqa.exgalleries.helpers.LibraryParser;

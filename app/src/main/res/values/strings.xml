@@ -102,17 +102,17 @@
     <string name="webpage">Webpage</string>
     <string name="network_error">Network error</string>
     <string name="general">General</string>
-    <string name="link_wtg">http://www.wtg.ru</string>
+    <string name="link_wtg">https://www.edeqa.com</string>
     <string name="link_app">https://play.google.com/store/apps/details?id=com.edeqa.exgalleries</string>
     <string name="link_repository">https://github.com/whitetigergroup/exgalleries/tree/master/plugins</string>
-    <string name="copyright">Copyright © XXI, WTG</string>
+    <string name="copyright">Copyright © XXI, Edeqa</string>
     <string name="using_colon">Using: </string>
     <string name="get_new_plugins">Get new plugins</string>
     <string name="get_plugin_instruction">Download plugin in RAW-mode and add it from \"Download\" folder.</string>
     <string name="picture_removed">Picture removed</string>
     <string name="use_network">Use network</string>
     <string name="using_picasso">
-<![CDATA[<b>Picasso</b> by <i>Square, Inc</i> 
+<![CDATA[<b>Picasso</b> by <i>Square, Inc</i>
         (<a href="http://square.github.io">square.github.io</a>)]]>
     </string>
     <string name="using_touchimageview">
