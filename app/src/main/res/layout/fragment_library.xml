@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ru.wtg.exgalleries.LibraryActivity$PlaceholderFragment" >
+    tools:context="com.edeqa.exgalleries.LibraryActivity$PlaceholderFragment" >
 
     <TextView
         android:id="@+id/section_label"
