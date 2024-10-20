@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 import android.content.Context;
 import android.net.Uri;
@@ -17,12 +18,12 @@ public class TextFileFromUri extends FileFromUri implements TextFileFromUriInter
 
 	public TextFileFromUri() {
 		super();
-		sb = new StringBuffer("");
+		sb = new StringBuffer();
 	}
 
 	public TextFileFromUri(Context context, Uri uri) {
 		super(context, uri);
-		sb = new StringBuffer("");
+		sb = new StringBuffer();
 	}
 
 	public boolean read() {
@@ -52,7 +53,7 @@ public class TextFileFromUri extends FileFromUri implements TextFileFromUriInter
 				}
 		}
 		if (sb.length() > 1e6) {
-			sb = new StringBuffer("");
+			sb = new StringBuffer();
 			sError = context.getResources().getString(R.string.file_is_too_big);
 			bSuccess = false;
 		}
@@ -81,7 +82,7 @@ public class TextFileFromUri extends FileFromUri implements TextFileFromUriInter
 		FileOutputStream fout = null;
 		try {
 			fout = new FileOutputStream(file);
-			fout.write(sb.toString().getBytes("UTF-8"));
+			fout.write(sb.toString().getBytes(StandardCharsets.UTF_8));
 			fout.close();
 		} catch (FileNotFoundException e) {
 			sError = e.getMessage();

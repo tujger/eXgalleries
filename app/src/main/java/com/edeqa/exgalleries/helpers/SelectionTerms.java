@@ -6,14 +6,14 @@ import java.util.Map;
 import android.text.TextUtils;
 
 public class SelectionTerms {
-	
+
 	public static final int SHOW_ALL=0;
 	public static final int SHOW_ONLY_NEW=1;
 	public static final int SHOW_ONLY_OLD=2;
 	public static final int SHOW_ONLY_RATED=3;
-	
-	private Map<String, String> terms_key;
-	private Map<String, String> terms_value;
+
+	private final Map<String, String> terms_key;
+	private final Map<String, String> terms_value;
 	private String order;
 
 	public SelectionTerms() {
@@ -25,20 +25,20 @@ public class SelectionTerms {
 
 	public String getSelection() {
 		return TextUtils.join(" AND ", terms_key.values().toArray(new String[terms_key.keySet().size()]));
-	};
+	}
 
-	public String[] getSelectionArgs() {
+  public String[] getSelectionArgs() {
 		return terms_value.values().toArray(new String[terms_value.values().size()]);
-	};
+	}
 
-	public String getOrder(){
+  public String getOrder(){
 		return order;
 	}
-	
+
 	public void addOrder(String KEY_type,boolean ASC){
 		order=KEY_type + (ASC?" ASC":" DESC");
 	}
-	
+
 	public void addTermIs(String name, String value) {
 		terms_key.put(name, queryIs(name));
 		terms_value.put(name, value);
@@ -73,7 +73,7 @@ public class SelectionTerms {
 		terms_key.put(name, queryIs(name));
 		terms_value.put(name, value + "");
 	}
-	
+
 	private String queryIsNull(String KEY_id) {
 		return "(" + KEY_id + " IS NULL OR "+KEY_id+" = 0 OR " + KEY_id + " = ?)";
 	}
@@ -86,7 +86,6 @@ public class SelectionTerms {
 		return "(" + KEY_id + " IS NOT NULL AND " + KEY_id + " = ?)";
 	}
 
-	
-	
-}
 
+
+}

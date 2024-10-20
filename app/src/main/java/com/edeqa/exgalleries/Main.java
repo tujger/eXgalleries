@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import com.edeqa.exgalleries.helpers.Interactor;
 
 /**
- * 
+ *
  */
 
 /**
@@ -24,7 +24,7 @@ public class Main extends Application{
 	private static Interactor interactor;
 	private static MainActivity mainActivity=null;
 	@SuppressLint("UseSparseArrays")
-	private static Map<Integer,MenuItem> menuItem=new HashMap<Integer, MenuItem>(); 
+	private static final Map<Integer,MenuItem> menuItem=new HashMap<Integer, MenuItem>();
 	private static boolean serviceRunning=false;
 
     public void onCreate(){
@@ -62,7 +62,7 @@ public class Main extends Application{
 
 	/*
 	 * public static Context getCurrentActivity() { return currentActivity; }
-	 * 
+	 *
 	 * public static void setCurrentActivity(Context currentActivity) {
 	 * Main.currentActivity = currentActivity; }
 	 */

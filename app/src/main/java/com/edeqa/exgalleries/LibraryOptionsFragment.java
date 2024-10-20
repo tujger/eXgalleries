@@ -26,7 +26,7 @@ public class LibraryOptionsFragment extends PreferenceFragment {
 
 	private Item item;
 	private ItemAdapter ia;
-	private long libId;
+	private final long libId;
 	private EditTextPreference ep;
 
 	public LibraryOptionsFragment(long libId) {
@@ -53,7 +53,7 @@ public class LibraryOptionsFragment extends PreferenceFragment {
 			@Override
 			public boolean onPreferenceChange(Preference preference, Object newValue) {
 				String str = (String) newValue;
-				if (str.toString().length() > 0) {
+				if (str.length() > 0) {
 					preference.setDefaultValue(str);
 					preference.setSummary(str);
 					item.setTitle(str);
@@ -64,13 +64,13 @@ public class LibraryOptionsFragment extends PreferenceFragment {
 			}
 		});
 
-		Preference p = (Preference) getPreferenceManager().findPreference("description");
+		Preference p = getPreferenceManager().findPreference("description");
 		p.setSummary(Html.fromHtml(item.getDescription()));
 
-		p = (Preference) getPreferenceManager().findPreference("author");
+		p = getPreferenceManager().findPreference("author");
 		p.setSummary(Html.fromHtml(item.getAuthor()));
 
-		p = (Preference) getPreferenceManager().findPreference("version");
+		p = getPreferenceManager().findPreference("version");
 		p.setSummary(String.format("%.1f", Library.getVersion(item)));
 
 		p = getPreferenceManager().findPreference("link_to");
@@ -160,7 +160,7 @@ public class LibraryOptionsFragment extends PreferenceFragment {
 		cur.close();
 
 		CheckBoxPreference cb = (CheckBoxPreference) getPreferenceManager().findPreference("visible");
-		((CheckBoxPreference)cb).setChecked(false);
+		cb.setChecked(false);
 
 		cb.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
 			@Override
@@ -196,7 +196,7 @@ public class LibraryOptionsFragment extends PreferenceFragment {
 		});
 
 		cb = (CheckBoxPreference) getPreferenceManager().findPreference("updatable");
-		((CheckBoxPreference)cb).setChecked(false);
+		cb.setChecked(false);
 
 		cb.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
 			@Override

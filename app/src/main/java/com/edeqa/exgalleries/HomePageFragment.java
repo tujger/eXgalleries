@@ -31,7 +31,7 @@ public class HomePageFragment extends Fragment implements AbsListView.OnItemClic
 	private AbsListView mListView;
 
 	public HomePageFragment() {
-		
+
 	}
 
 	@Override
@@ -44,20 +44,20 @@ public class HomePageFragment extends Fragment implements AbsListView.OnItemClic
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_homepage, container, false);
 
-		mListView = (AbsListView) view.findViewById(android.R.id.list);
-		
+		mListView = view.findViewById(android.R.id.list);
+
 		la = ItemAdapter.getInstance(getActivity(), 0);
 		la.setSelectionTerms(new SelectionLibraries());
 		la.setView(R.layout.item_library);
 
 		((AdapterView<ListAdapter>) mListView).setAdapter(la);
-		
+
 		mListView.setOnItemClickListener(this);
 
 		return view;
 	}
 
-	
+
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
@@ -66,7 +66,7 @@ public class HomePageFragment extends Fragment implements AbsListView.OnItemClic
 //			Main.getMainActivity().onNavigationDrawerItemSelected(0, 0);
 
 		} catch (ClassCastException e) {
-			throw new ClassCastException(activity.toString() + " must implement OnFragmentInteractionListener");
+			throw new ClassCastException(activity + " must implement OnFragmentInteractionListener");
 		}
 	}
 
@@ -79,7 +79,7 @@ public class HomePageFragment extends Fragment implements AbsListView.OnItemClic
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		if (null != mListener) {
-			
+
 			mListener.onFragmentInteraction(la.getItemId(position)+"");
 //			}else{
 //				Toast.makeText(Main.getContext(), "Not found galleries", Toast.LENGTH_SHORT).show();
@@ -88,7 +88,7 @@ public class HomePageFragment extends Fragment implements AbsListView.OnItemClic
 		}
 	}
 
-	
+
 	/**
 	 * The default content for this Fragment has a TextView that is shown when
 	 * the list is empty. If you would like to change the text, call this method
@@ -112,7 +112,7 @@ public class HomePageFragment extends Fragment implements AbsListView.OnItemClic
 	 * >Communicating with Other Fragments</a> for more information.
 	 */
 	public interface OnFragmentInteractionListener {
-		public void onFragmentInteraction(String id);
+		void onFragmentInteraction(String id);
 	}
 
 }

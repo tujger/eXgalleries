@@ -38,13 +38,13 @@ public class OptionsFragment extends PreferenceFragment {
 			public boolean onPreferenceChange(Preference preference, Object newValue) {
 
 				((ListPreference) preference).setValue(newValue.toString());
-				((ListPreference) preference).setSummary(((ListPreference) preference).getEntry());
+				preference.setSummary(((ListPreference) preference).getEntry());
 				NetworkState.getInstance().reInit();
 				return true;
 			}
 		});
 
-		Preference p = (Preference) getPreferenceManager().findPreference("app");
+		Preference p = getPreferenceManager().findPreference("app");
 		try {
 			p.setSummary(getString(R.string.version_number,
 					getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0).versionName));
@@ -52,7 +52,7 @@ public class OptionsFragment extends PreferenceFragment {
 			e.printStackTrace();
 		}
 
-		p = (Preference) getPreferenceManager().findPreference("using");
+		p = getPreferenceManager().findPreference("using");
 		p.setSummary(
 				Html.fromHtml(TextUtils.join("",
 						new String[] { getString(R.string.using_picasso), "<br>",
@@ -60,19 +60,19 @@ public class OptionsFragment extends PreferenceFragment {
 								getString(R.string.using_gridviewwithheaderandfooter) })));
 
 
-		p = (Preference) getPreferenceManager().findPreference("counter_albums_total");
+		p = getPreferenceManager().findPreference("counter_albums_total");
 		p.setSummary(ItemAdapter.getInstance(getActivity(), 0).getEntries(new SelectionAlbumRaw()).getCount() + "");
 
-		p = (Preference) getPreferenceManager().findPreference("counter_pictures_total");
+		p = getPreferenceManager().findPreference("counter_pictures_total");
 		p.setSummary(ItemAdapter.getInstance(getActivity(), 0).getEntries(new SelectionAll()).getCount() + "");
 
-		p = (Preference) getPreferenceManager().findPreference("counter_pictures_new");
+		p = getPreferenceManager().findPreference("counter_pictures_new");
 		p.setSummary(ItemAdapter.getInstance(getActivity(), 0).getEntries(new SelectionNew()).getCount() + "");
 
-		p = (Preference) getPreferenceManager().findPreference("counter_pictures_favorite");
+		p = getPreferenceManager().findPreference("counter_pictures_favorite");
 		p.setSummary(ItemAdapter.getInstance(getActivity(), 0).getEntries(new SelectionFavorites()).getCount() + "");
 
-		p = (Preference) getPreferenceManager().findPreference("counter_pictures_fault");
+		p = getPreferenceManager().findPreference("counter_pictures_fault");
 		p.setSummary(ItemAdapter.getInstance(getActivity(), 0).getEntries(new SelectionFault()).getCount() + "");
 
 	}

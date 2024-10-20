@@ -34,7 +34,7 @@ public class Interactor {
 	protected Context context;
 	protected String script;
 	protected Handler handler;
-	private Object monitor = new Object();
+	private final Object monitor = new Object();
 	private boolean ready = false;
 	private InteractorJSMethods javaScriptMethods;
 
@@ -50,7 +50,7 @@ public class Interactor {
 				e1.printStackTrace();
 				script="";
 			}
-		
+
 		handler = new Handler(context.getMainLooper());
 		handler.post(interactorRunnable);
 
@@ -66,7 +66,7 @@ public class Interactor {
 
 	}
 
-	private Runnable interactorRunnable = new Runnable() {
+	private final Runnable interactorRunnable = new Runnable() {
 		@SuppressLint("SetJavaScriptEnabled")
 		@Override
 		public void run() {
@@ -86,9 +86,9 @@ public class Interactor {
 					.setUserAgentString("Mozilla/5.0 (Windows NT 6.2; WOW64; rv:16.0) Gecko/20100101 Firefox/16.0");
 
 			browser.clearCache(true);
-			
+
 			javaScriptMethods = new InteractorJSMethods(context);
-			
+
 			browser.setWebChromeClient(new WebChromeClient() {
 				public void onProgressChanged(WebView view, int progress) {
 					if(progress==100){
@@ -143,8 +143,8 @@ public class Interactor {
 						System.out.println("IllegalArgumentException with method: "+message+". Exception: "+e.getMessage());
 					}
 					return true;
-				};
-			});
+				}
+            });
 
 			browser.addJavascriptInterface(javaScriptMethods, SIGNATURE);
 
@@ -182,28 +182,28 @@ public class Interactor {
 	};
 
 	public boolean isReady(){
-		return javaScriptMethods.isReady(); 
+		return javaScriptMethods.isReady();
 	}
 
 	public void setCallback(TaskCompletedInterface object){
 		javaScriptMethods.setCallback(object);
 	}
-	
+
 	public void callMethod(String method){
 		browser.loadUrl("javascript:"+method+";api_done(\"done:"+method+"\");");
 	}
-	
+
 	public void callFinish(){
 		javaScriptMethods.Finish();
 	}
-	
+
 	public void showCounter(){
 
 		handler = new Handler(context.getMainLooper());
 		handler.post(new Runnable(){
 			@Override
 		public void run(){
-				
+
 				if (InteractorJSMethods.getCounter() > 0)
 					Toast.makeText(context,
 							context.getString(R.string.counter_new_pictures, InteractorJSMethods.getCounter()),
@@ -214,12 +214,12 @@ public class Interactor {
 		});
 
 	}
-	
+
 	public void destroy() {
 		// if(webView!=null)webView.destroy();
 		// if(storiesList!=null)storiesList.destroy();
 	}
 
 
-	
+
 }

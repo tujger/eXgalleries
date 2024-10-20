@@ -44,7 +44,7 @@ public class GalleryListFragment extends Fragment implements GridView.OnItemClic
 		this.currentId = currentId;
 
 	}
-	
+
 	public void setScrollToId(long scrollToId) {
 		this.scrollToId = scrollToId;
 	}
@@ -59,7 +59,7 @@ public class GalleryListFragment extends Fragment implements GridView.OnItemClic
 	public long getScrollToId() {
 		return ItemAdapter.getInstance(getActivity(), currentId).getIdOfCurrentPosition();
 	}
-	
+
 	public GalleryListFragment() {
 	}
 
@@ -115,7 +115,7 @@ public class GalleryListFragment extends Fragment implements GridView.OnItemClic
 
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
-		mViewPager = (ViewPager) view.findViewById(R.id.viewpager);
+		mViewPager = view.findViewById(R.id.viewpager);
 
 		gpa = new GalleryPagerAdapter(getActivity(), activeId);
 
@@ -150,7 +150,7 @@ public class GalleryListFragment extends Fragment implements GridView.OnItemClic
 			}
 		});
 
-		mSlidingTabLayout = (SlidingTabLayout) view.findViewById(R.id.sliding_tabs);
+		mSlidingTabLayout = view.findViewById(R.id.sliding_tabs);
 		mSlidingTabLayout.setViewPager(mViewPager);
 
 	}

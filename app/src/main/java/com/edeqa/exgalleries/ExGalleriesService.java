@@ -342,8 +342,7 @@ public class ExGalleriesService extends Service {
 			} else {
 				Toast.makeText(getApplicationContext(), getString(R.string.javascript_initialization_timeout),
 						Toast.LENGTH_SHORT).show();
-				;
-			}
+            }
 
 			// while(!browser.API_DONE && i++<WebViewJS.WAIT_FOR_DONE){
 			// try {

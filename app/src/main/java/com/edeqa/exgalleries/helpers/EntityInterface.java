@@ -2,40 +2,40 @@ package com.edeqa.exgalleries.helpers;
 
 public interface EntityInterface<T> {
 
-	abstract T getThis();
+	T getThis();
 
-	public boolean setProperty(String property, String value);
+	boolean setProperty(String property, String value);
 
-	public long getId();
+	long getId();
 
-	public T setId(long id);
+	T setId(long id);
 
-	public String getName();
+	String getName();
 
-	public T setName(String name);
+	T setName(String name);
 
-	public String getTitle();
+	String getTitle();
 
-	public T setTitle(String title);
+	T setTitle(String title);
 
-	public String getLink();
+	String getLink();
 
-	public T setLink(String link);
+	T setLink(String link);
 
-	public String getDescription();
+	String getDescription();
 
-	public T setDescription(String description);
+	T setDescription(String description);
 
-	public long getCreateDate();
+	long getCreateDate();
 
-	public T setCreateDate(long createDate);
+	T setCreateDate(long createDate);
 
-	public long getUpdateDate();
+	long getUpdateDate();
 
-	public T setUpdateDate(long updateDate);
+	T setUpdateDate(long updateDate);
 
-	public long getAccessDate();
+	long getAccessDate();
 
-	public T setAccessDate(long accessDate);
+	T setAccessDate(long accessDate);
 
 }

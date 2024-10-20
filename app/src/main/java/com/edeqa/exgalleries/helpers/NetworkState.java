@@ -9,7 +9,7 @@ import com.edeqa.exgalleries.Main;
 public class NetworkState {
 
 	private static NetworkState mInstance;
-	private ConnectivityManager connMgr;
+	private final ConnectivityManager connMgr;
 	private int condition;
 
 	public final int NETWORK_WIFI = 1;
@@ -38,7 +38,7 @@ public class NetworkState {
 		condition=Integer.valueOf(sp.getString("use_network", "1"));
 		return this;
 	}
-	
+
 	public boolean isWifi() {
 		return connMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnected();
 	}
@@ -56,9 +56,8 @@ public class NetworkState {
 			return true;
 		else if ((condition & NETWORK_MOBILE) > 0 && (isWifi() || (isMobile() && !isRoaming())))
 			return true;
-		else if ((condition & NETWORK_ROAMING) > 0 && (isWifi() || isMobile()))
-			return true;
-		return false;
-	}
+		else
+          return (condition & NETWORK_ROAMING) > 0 && (isWifi() || isMobile());
+    }
 
 }
